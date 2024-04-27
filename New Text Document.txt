@@ -1,0 +1,2 @@
+cd C:\Program Files\MySQL\MySQL Server 8.3\bin
+mysqldump -hlocalhost -uroot -proot chung_cu_bluemoon>"D:\My_code\NMCNPM.20232-Nhom1\chung_cu_bluemoon.spl"
