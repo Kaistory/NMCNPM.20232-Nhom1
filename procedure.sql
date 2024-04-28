@@ -74,12 +74,12 @@ BEGIN
 END $$
 DELIMITER ;
 
-DELIMITER $$
-CREATE PROCEDURE thong_ke_nk(in idmin int, in idmax int, in ngaysinh date, in ttmin int,in ttmax int, in mqhmin int,in mqhmax int)
+thong_ke_nkDELIMITER $$
+CREATE PROCEDURE thong_ke_nk(in idmin int, in idmax int, in ttmin int,in ttmax int, in mqhmin int,in mqhmax int)
 BEGIN
 	SELECT *
-    FROM nhan_khau join quan_he on nhan_khau.ID = quan_he.ID
-    WHERE (idmin / 1000 <= PHONG && idmax/ 1000 >= PHONG && GIOI_TINH <= (idmax / 100)% 10 && GIOI_TINH >= (idmin / 100)% 10 && TRANG_THAI <= ttmin && TRANG_THAI >=ttmax,);
+    FROM nhan_khau join chu_ho on chu_ho.ID_CH = nhan_khau.ID_CHU_HO
+    WHERE (idmin / 1000 <= PHONG && idmax/ 1000 >= PHONG && GIOI_TINH <= (idmax / 100)% 10 && GIOI_TINH >= (idmin / 100)% 10 && TRANG_THAI <= ttmin && TRANG_THAI >=ttmax,MQH >= mqhmin && MQH <= mqhmax);
 END $$
 DELIMITER ;
 
