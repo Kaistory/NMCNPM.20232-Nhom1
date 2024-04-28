@@ -1,0 +1,44 @@
+Phần 2: Đặc tả yêu cầu bài toán: 24/4 - 26/4 ( hạn cuối: 2/5)
+Use case chính:
+-------------------------------------------- Nhóm 1: Lương + Phú
+Vẽ biểu đồ uc phân ra mức 2 + Đặc tả từng uc
+- Quản lý hộ khẩu: 12 uc ( Lương + Phú ) Vẽ biểu đồ uc
++ 4.Thêm hộ khẩu incldude 5.Thêm nhân khẩu
++ 6.Xem danh sách hộ khẩu extend: 7.Sửa hộ khẩu, 8.Xóa hộ khẩu
++ 12.Tìm kiếm hộ khẩu .sửa hộ khẩu, xóa hộ khẩu
++ 13.Tìm kiếm nhân khẩu .sửa nhân khẩu, xóa nhân khẩu
++ 14.Thông kê hộ khẩu
++ 15.Thống kê nhân khẩu
+---------------------------------------------- Nhóm 2: Khánh + Khải ae
+- Phần 2.1: Khánh
+
+Vẽ biểu đồ uc phân ra mức 2 + Đặc tả từng uc
+- Đăng nhập: 3uc: Khánh
++ 1.Nhập thông tin đăng nhập extend 2.Quên mật khẩu
++ 3.Đổi mật khẩu
+
+- Quản lý khoản thu:6 uc ( Khải e ): Vẽ biểu đồ uc
++ 16.Thêm khoản thu 
++ 17.Xem danh sách khoản thu extend 18.sửa ,19.xóa
++ 20.Tìm kiếm khoản thu
++ 21.Thống kê khoản thu
+
+- Quản lý thu tiền: 6 uc( Khải a ): Vẽ biểu đô
++ 22.Thêm người nộp tiền extend 23.sửa thông tin nộp tiền
++ 24.Xem danh sách nộp tiền extend 25.xóa danh sách
++ 26.Tìm kiếm thông tin nộp tiền
++ 27.Thống kê thu tiền
+
+- Phần 2.4: Yêu cầu phi chức năng Khải e
+----------------------------------------------
+Phần 3: Phân tích yêu cầu..... Tuần 29/4
+
+Phần 4: Thiết kế... Tuần 6/5
+
+Phần 5: Xây dựng minh họa 2 27/4 - 18/5
+- Giao diện : java fx 1: Khải a
+- xử lý: java 2 : Lương + Phú
+- database: mySQL 2 : Khải e + Khánh
+
+Phần 6,7,8: 
+

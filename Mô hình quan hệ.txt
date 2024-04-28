@@ -1,10 +1,26 @@
 KHOAN_THU(MA_KT, LOAI_KT, TEN_KT, SO_TIEN, DON_VI)
 CONG_TY_CC(MA_CT, TEN_CT, SO_TIEN, THOI_GIAN, MA_KT, MA_HO)
 PHUONG_TIEN_GUI(BIEN_SO,LOAI , MA_HO)
-HO_GD(MA_HO, PHONG, SO_TV, DIEN_TICH)
-NHAN_KHAU(ID, CCCD, TEN, SDT, EMAIL, NGAY_SINH, DIA_CHI, TRANG_THAI)
 THU_TIEN(MA_KT, MA_HO, SO_TIEN, THOI_GIAN)
-CHU_HO(ID, MA_HO)
-QUAN_HE(MA_HO,MQH)
+
+CHU_HO(ID, MA_HO, SO_TV)
+HO_GD(MA_HO, PHONG, DIEN_TICH,CHAT_LUONG)
+NHAN_KHAU(ID, CCCD, TEN, SDT, EMAIL, NGAY_SINH, DIA_CHI, TRANG_THAI, MQH, ID_CHU_HO)
 
 cd C:\Program Files\MySQL\MySQL Server 8.3\bin
+
+
+Thong_ke_hogd : tang, sotvmin, sotvmax, dtmin, dtmax
+	In ra : tat
+
+ID = PHONG + GT + STT
+TRANG THAI : 1: dinh cu, 2: tam tru: 3 tam vang
+GIOI TINH : 1: nam, 2: nu, 3 tat ca
+CHAT_LUONG: 1: kiot, 2 tang de, 3 nha o, 4 penhouse
+30 tầng, tầng 1 làm kiot, 4 tầng đế, 24 tầng nhà ở và 1 tầng penhouse
+
+MQH : 1 : bố, 2 mẹ, 3 ông, 4 bà, 5 con , 6 vo, 7 chong, 8 khac,9 chu ho, 10 tat ca   
+
+
+
+CHÚ Ý: NẾU ĐỂ TRỐNG LÀ LẤY TẤT THÌ CHO GIÁ TRỊ MAX VƯỢT QUÁ VÀ MIN CŨNG THẾ 
