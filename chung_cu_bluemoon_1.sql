@@ -202,6 +202,29 @@ LOCK TABLES `pt_gui` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tai_khoan`
+--
+
+DROP TABLE IF EXISTS `tai_khoan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tai_khoan` (
+  `TEN_TAI_KHOAN` varchar(45) COLLATE utf8mb3_bin NOT NULL,
+  `MAT_KHAU` varchar(45) COLLATE utf8mb3_bin DEFAULT NULL,
+  PRIMARY KEY (`TEN_TAI_KHOAN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tai_khoan`
+--
+
+LOCK TABLES `tai_khoan` WRITE;
+/*!40000 ALTER TABLE `tai_khoan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tai_khoan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `thu_tien`
 --
 
@@ -234,4 +257,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-02  0:14:17
+-- Dump completed on 2024-05-02  0:16:02
