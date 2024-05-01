@@ -1,7 +1,8 @@
 KHOAN_THU(MA_KT, LOAI_KT, TEN_KT, SO_TIEN, DON_VI)
-CONG_TY_CC(MA_CT, TEN_CT, SO_TIEN, THOI_GIAN, MA_KT, MA_HO)
-PHUONG_TIEN_GUI(BIEN_SO,LOAI , MA_HO)
-THU_TIEN(MA_KT, MA_HO, SO_TIEN, THOI_GIAN)
+CONG_TY_CC(MA_CT, TEN_CT, SO_TIEN, THOI_GIAN, MA_HO)
+PHUONG_TIEN_GUI(LOAI ,SO_LUONG, MA_HO)
+THU_TIEN(MA_HO, SO_TIEN_NOP, THOI_GIAN)
+CAC_KHOAN_NOP(MA_KT, MA_HO, TRANG_THAI, SO_LUONG)
 
 CHU_HO(ID, MA_HO, SO_TV)
 HO_GD(MA_HO, PHONG, DIEN_TICH,CHAT_LUONG)
@@ -21,6 +22,10 @@ CHAT_LUONG: 1: kiot, 2 tang de, 3 nha o, 4 penhouse
 
 MQH : 1 : bố, 2 mẹ, 3 ông, 4 bà, 5 con , 6 vo, 7 chong, 8 khac,9 chu ho, 10 tat ca   
 
+Loai_KT 1: Hang thang, 2 tung doi
+
+Cần phải kiểm tra mã khoản thu nếu muốn sửa khoản thu
+nếu người nộp đủ tiền thì xóa toàn bộ khoản thu của hộ đó ra khỏi danh sách
 
 
 CHÚ Ý: NẾU ĐỂ TRỐNG LÀ LẤY TẤT THÌ CHO GIÁ TRỊ MAX VƯỢT QUÁ VÀ MIN CŨNG THẾ 

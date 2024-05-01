@@ -64,7 +64,14 @@ DELIMITER ;
 
 DELIMITER $$
 
-
+DELIMITER $$
+CREATE PROCEDURE tim_ho_nk(in id int)
+BEGIN
+	select *
+    from nhan_khau
+    where(ID = id);
+END $$
+DELIMITER ;
 
 CREATE PROCEDURE thong_ke_ho_gd(in tang int, in sotvmin int, in sotvmax int, in dtmin int, in dtmax int)
 BEGIN
@@ -74,7 +81,7 @@ BEGIN
 END $$
 DELIMITER ;
 
-thong_ke_nkDELIMITER $$
+DELIMITER $$
 CREATE PROCEDURE thong_ke_nk(in idmin int, in idmax int, in ttmin int,in ttmax int, in mqhmin int,in mqhmax int)
 BEGIN
 	SELECT *
@@ -83,4 +90,120 @@ BEGIN
 END $$
 DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE them_kt(in makt int, in loaikt varchar(45),in tenkt varchar(45), in sotien int, in donvi varchar(45))
+BEGIN
+	INSERT INTO `chung_cu_bluemoon`.`ho_gd` (`MA_KT`, `LOAI_KT`, `TEN_KT`,`SO_TIEN`, `DON_VI`) VALUES (makt, loaikt, tenkt, sotien, donvi);
+END $$
+DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE xem_ds_kt()
+BEGIN
+	select *
+    from khoan_thu;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE xoa_kt(in makt int)
+BEGIN
+	DELETE FROM `chung_cu_bluemoon`.`khoan_thu` WHERE (`MA_KT` = makt);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+
+DELIMITER $$
+CREATE PROCEDURE sua_kt(in makt int, in loaikt varchar(45),in tenkt varchar(45), in sotien int, in donvi varchar(45))
+BEGIN
+	UPDATE `chung_cu_bluemoon`.`khoan_thu` SET `LOAI_KT` = loaikt WHERE (loaikt <> NULL && `MA_KT` = makt);
+    UPDATE `chung_cu_bluemoon`.`khoan_thu` SET `TEN_KT` = tenlt WHERE (tenkt <> NULL && `MA_KT` = makt);
+    UPDATE `chung_cu_bluemoon`.`khoan_thu` SET `SO_TIEN` = sotien WHERE (sotien <> NULL && `MA_KT` = makt);
+    UPDATE `chung_cu_bluemoon`.`khoan_thu` SET `DON_VI` = loaikt WHERE (donvi <> NULL && `MA_KT` = makt);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE tim_ho_kt(in makt int)
+BEGIN
+	select *
+    from khoan_thu
+    where(MA_KT = makt);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE thong_ke_kt(in loaimin int, in loaimax int, in tienmin int,in tienmax int)
+BEGIN
+	SELECT *
+    FROM khoan_thu
+    WHERE (LOAI_KT <= loaimax and LOAI_KT >= loaimin and tienmin <= SO_TIEN and tienmax >= SO_TIEN);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE xem_ds_khoan_nop(in maho int)
+BEGIN
+	select khoan_thu.TEN_KT, khoan_thu.SO_TIEN
+    from khoan_thu
+    where(MA_HO = maho)
+    UNION
+    select cong_ty_cc.TEN_KT, cong_ty_cc.SO_TIEN
+    from cong_ty_cc
+    where(MA_HO = maho);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE them_nguoi_nop(in maho int, in sotien int, in thoigian date)
+BEGIN
+	INSERT INTO `chung_cu_bluemoon`.`cac_khoan_nop` (`MA_HO`,`SO_TIEN`, `THOI_GIAN`) VALUES (maho, sotien, thoigian);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sua_nguoi_nop(in maho int, in sotien int, in thoigian date)
+BEGIN
+	UPDATE `chung_cu_bluemoon`.`cac_khoan_nop` SET `SO_TIEN` = sotien WHERE (sotien <> NULL && `MA_HO` = makt);
+    UPDATE `chung_cu_bluemoon`.`cac_khoan_nop` SET `THOI_GIAN` = thoigian WHERE (thoigian <> NULL && `MA_HO` = makt);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE tim_tt_tien_nop(in maho int)
+BEGIN
+	select *
+    from cac_khoan_nop
+    where(ID = id);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE tim_tien_nop_ho(in maho int)
+BEGIN
+	select khoan_thu.TEN_KT, khoan_thu.SO_TIEN
+    from khoan_thu
+    where(MA_HO = maho)
+    UNION
+    select cong_ty_cc.TEN_KT, cong_ty_cc.SO_TIEN
+    from cong_ty_cc
+    where(MA_HO = maho);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE xoa_khoan_thu_gd(in maho int)
+BEGIN
+	DELETE FROM `chung_cu_bluemoon`.`cac_khoan_nop` WHERE (`MA_HO` = maho);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE thong_ke_thu_tien(in trangthai varchar(45))
+BEGIN
+	SELECT *
+    FROM cac_khoan_nop
+    WHERE (TRANG_THAI = trangthai);
+END $$
+DELIMITER ;

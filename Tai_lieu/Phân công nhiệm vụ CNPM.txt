@@ -24,8 +24,8 @@ Vẽ biểu đồ uc phân ra mức 2 + Đặc tả từng uc
 + 21.Thống kê khoản thu
 
 - Quản lý thu tiền: 6 uc( Khải a ): Vẽ biểu đô
-+ 22.Thêm người nộp tiền extend 23.sửa thông tin nộp tiền
-+ 24.Xem danh sách nộp tiền extend 25.xóa danh sách
++ 22.Thêm người nộp tiền extend //23.sửa thông tin nộp tiền
++ 24.Xem danh sách thu tien  extend                               (la sao) 25.xóa danh sách
 + 26.Tìm kiếm thông tin nộp tiền
 + 27.Thống kê thu tiền
 
